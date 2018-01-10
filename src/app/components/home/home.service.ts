@@ -52,7 +52,7 @@ export class ListaAudiosService {
 	{src: 'diaLaboral', displayName:'dia laboral'},
 	{src: 'estaPendienteEs', displayName:'pendiente'},
 	{src: 'quieroQueSeMejore', displayName:'que se mejore'},
-	{src: 'sabersubirybajar', displayName:'peamoa'},
+	{src: 'sabersubirybajar', displayName:'subir y baja'},
 	{src: 'vamoirnoscomoyoquiero', displayName:'vamo irno'},
 	{src: 'vamonoACasa', displayName:'vamono a casa'},
     {src: 'peamoa_sutrasero', displayName:'como se compolta'},
