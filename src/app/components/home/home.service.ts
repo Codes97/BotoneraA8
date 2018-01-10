@@ -72,7 +72,7 @@ export class ListaAudiosService {
     {src: 'tano-pasman/negro-de-mierda', displayName:'negro de mierda'},
     {src: 'tano-pasman/noooo', displayName:'nooo'},
     {src: 'tano-pasman/paraguayo', displayName:'paraguayo'},
-    {src: 'tano-pasman/la-publicidad-pelotudo', displayName:'que pone la publicidad'},
+    {src: 'tano-pasman/que-pones', displayName:'que pone la publicidad'},
     {src: 'tano-pasman/pongan-huevo', displayName:'pongan huevo'},
     {src: 'tano-pasman/que-mierda-es-esto', displayName:'que mierda es esto'}
   ];
