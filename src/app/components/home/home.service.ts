@@ -102,6 +102,7 @@ export class ListaAudiosService {
 / Agregar hot-key
 */
 public hotKeys = {
+	'226':'AAAAAAAAAA',
   '79': 'forinia',
   '66': 'choro_loreventas',
   '78': 'choro_zapateas',
