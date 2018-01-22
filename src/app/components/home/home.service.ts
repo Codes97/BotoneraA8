@@ -115,7 +115,7 @@ public hotKeys = {
   '80': 'peamoa',
   '81': 'gemido',
   '87': 'mesobra',
-  '89': 'ledijeNo',
+  '89': 'ledijequeNo',
   '82': 'trabas_activopasivo',
   '84': 'trabas_servicio',
   '85': 'trabas_asadito',
