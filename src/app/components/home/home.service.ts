@@ -20,7 +20,9 @@ export class ListaAudiosService {
     {displayName:'los cuatro', src:'endu_loscuatro'},
     {displayName:'curva muy pronuncia', src:'endu_estacurva'},
     {displayName:'taba muerto', src:'endu_muerto'},
-    {displayName:'qepd', src:'endu_qepd'}
+    {displayName:'qepd', src:'endu_qepd'},
+	{displayName:'aaaaaa', src:'endu_aaaaa'},
+	{displayName:'roberto gil', src:'endu_roberto gil'}
   ];
   travas = [
     {src: 'mesobra', displayName:'Me sobra'},
@@ -43,7 +45,8 @@ export class ListaAudiosService {
     {src: 'ronnie_alright', displayName:'alright!'},
     {src: 'ronnie_gobabylocaso', displayName:'go baby locaso'},
     {src: 'ronnie_yea1', displayName:'yeaaaah'},
-	{src: 'ronnie_yea1largo', displayName:'yeaaaah locaso'}
+	{src: 'ronnie_yea1largo', displayName:'yeaaaah locaso'},
+	{src: 'ronnie_yeah10000', displayName:'yeaaaah 2'}
   ];
   clasicos = [
     {src: 'gemido', displayName:'gemido'},
@@ -98,13 +101,19 @@ export class ListaAudiosService {
 	{src: 'soyTuPadre', displayName:'soy tu padre'},
 	{src: 'awanta1', displayName:'awanta'},
 	{src: 'awanta2', displayName:'awantaaaaaa'},
-	{src: 'sevadescontrolaaa', displayName:'se va descontrola'}
+	{src: 'sevadescontrolaaa', displayName:'se va descontrola'},
+	{src: 'china_aaaaaw', displayName:'aaaaaw'},
+	{src: 'china_nohayporque', displayName:'no hay porque'},
+	{src: 'china_puto', displayName:'puto'},
   ];
 
 /*
 / Agregar hot-key
 */
 public hotKeys = {
+	'49':'china_aaaaaw',
+	'50':'china_nohayporque',
+	'51':'china_puto',
 	'226':'AAAAAAAAAA',
   '79': 'forinia',
   '66': 'choro_loreventas',

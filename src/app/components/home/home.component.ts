@@ -22,11 +22,12 @@ export class HomeComponent {
   public clasicos = [];
   public futbol = [];
   public varios = [];
+  public todos = [];
 
   constructor(private sonidosService: ListaAudiosService) {
-    this.obtenerListasAudio();
     this.hotKeys = this.sonidosService.getObjetoHotKeys();
     this.combinedHotKeys = this.sonidosService.getObjetoHotKeysCombinadas();
+	this.obtenerListasAudio();
   }
 
   obtenerListasAudio(){
@@ -36,6 +37,16 @@ export class HomeComponent {
     this.clasicos = this.sonidosService.getListaClasicos();
     this.futbol = this.sonidosService.getListaFutbol();
     this.varios = this.sonidosService.getListaVarios();
+	this.todos = this.todos.concat(this.listaLocoEndu, this.travas, this.ronnieColeman, this.clasicos, this.futbol, this.varios);
+	this.todos = this.todos.map(a => a.src);
+	
+	for (const combinedHotKey in this.combinedHotKeys) {
+		let a = this.combinedHotKeys[combinedHotKey];
+		if(a.indexOf('lo_') != -1){
+			this.todos.push(a);
+		}		
+	}
+	
   }
 
   public play(src): void {
@@ -49,8 +60,16 @@ export class HomeComponent {
   public stop(): void {
     this.audio.pause();
   }
+  
+  public random(): void {
+	  let rng = this.todos[Math.floor(Math.random() * this.todos.length)];
+	  this.play(rng);
+  }
 
   hotkeys($event) {
+	if ($event.keyCode == 220) {
+      this.random();
+    }
     if ($event.keyCode == 16) {
       this.stop();
     } else {
