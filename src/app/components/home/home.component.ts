@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ListaAudiosService } from './home.service';
-
 @Component({
   selector: 'btn-a8-home',
   host: { '(keyup)': 'hotkeys($event)'},
@@ -8,7 +7,7 @@ import { ListaAudiosService } from './home.service';
   styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent {
+export class HomeComponent{
 
   version: string = 'v1.130';
   audio = new Audio();
@@ -23,12 +22,15 @@ export class HomeComponent {
   public futbol = [];
   public varios = [];
   public todos = [];
+  
+  public speed = 1.0;
 
   constructor(private sonidosService: ListaAudiosService) {
     this.hotKeys = this.sonidosService.getObjetoHotKeys();
     this.combinedHotKeys = this.sonidosService.getObjetoHotKeysCombinadas();
 	this.obtenerListasAudio();
   }
+  
 
   obtenerListasAudio(){
     this.listaLocoEndu = this.sonidosService.getListaLocoEndu();
@@ -53,12 +55,32 @@ export class HomeComponent {
     if(src != 'undefined'){
         this.audio.src = '../assets/audio/'+ src +'.mp3';
         this.audio.load();
+		this.audio.playbackRate = this.speed;
         this.audio.play();
       }
   }
 
   public stop(): void {
     this.audio.pause();
+  }
+  
+  public speedUp(): void{
+	if(this.speed >= 2.0){
+		this.speed = 2.0;
+	}else{
+		this.speed += 0.1;
+	}
+  }
+  public speedDown(): void{
+	if(this.speed <= 0.1){
+		this.speed = 0.1;
+	}else{
+		this.speed -= 0.1;
+	}
+  }
+  public resetSpeed() :void{
+	this.stop();
+	this.speed = 1.0;
   }
   
   public random(): void {
@@ -70,6 +92,15 @@ export class HomeComponent {
 	if ($event.keyCode == 220) {
       this.random();
     }
+	if($event.keyCode == 107){
+		this.speedUp();
+	}
+	if($event.keyCode == 109){
+		this.speedDown();
+	}
+	if($event.keyCode == 110){
+		this.resetSpeed();
+	}
     if ($event.keyCode == 16) {
       this.stop();
     } else {

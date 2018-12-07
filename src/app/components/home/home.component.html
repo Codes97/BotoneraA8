@@ -20,9 +20,21 @@
     </div>
 </div>
 
+<button type="button" class="plus-button d-flex justify-content-center" (click)="speedUp()">
+    +
+</button>
+<button type="button" class="reset-button d-flex justify-content-center" (click)="resetSpeed()">
+    RESET
+</button>
+<button type="button" class="less-button d-flex justify-content-center" (click)="speedDown()">
+    -
+</button>
+
 <button type="button" class="stop-button d-flex justify-content-center" (click)="stop()">
     STOP
 </button>
+
+<label class="label speed-label">{{speed.toFixed(1)}}</label>
 
 <div class="container" (window:keydown)="hotkeys($event)">
 

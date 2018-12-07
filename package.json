@@ -14,7 +14,8 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.2.4",
+    "@angular/animations": "^7.0.2",
+    "@angular/cdk": "^7.0.2",
     "@angular/cli": "1.4.3",
     "@angular/common": "^4.2.4",
     "@angular/compiler": "^4.2.4",
@@ -22,6 +23,7 @@
     "@angular/core": "^4.2.4",
     "@angular/forms": "^4.2.4",
     "@angular/http": "^4.2.4",
+    "@angular/material": "^7.0.2",
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
