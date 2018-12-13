@@ -156,7 +156,10 @@ export class ListaAudiosService {
 	{src: 're_duros_estabamos_merca', displayName:'RE DUROS ESTABAMOS'},
 	{src: 'todo_el_asado_merca', displayName:'TODO EL ASADO QUEDO'},
 	{src: 'mirando_la_cara_merca', displayName:'MIRANDO LA CARA'},
-	{src: 'ñiambre_tenia_merca', displayName:'ÑAMBRE TENIA'},
+  {src: 'ñiambre_tenia_merca', displayName:'ÑAMBRE TENIA'},
+  {src: 'Sisabes', displayName:'Bucha si sabes'},
+  {src: 'Dehaberlosabido', displayName:'Bucha de haberlo sabido antes'},
+  {src: 'Conchesumare', displayName:'Bucha conchesumadre'},
   ];
 
 /*
