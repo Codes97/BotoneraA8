@@ -5,7 +5,7 @@
     <h1 class="text-center" style="font-family: 'Press Start 2P', cursive; margin-top: 1em">BOTONERA MEDIA PLAYER {{version}}</h1>
     <h3 class="text-center" style="font-family: 'Zilla Slab Highlight', cursive; margin-top: 0.5em">Clone or download</h3>
     <p class="text-center repo-url">
-        <strong>https://github.com/santifonzalida/botoneraA8.git</strong>
+        <strong>https://github.com/Codes97/BotoneraA8</strong>
     </p>
 </div>
 
@@ -115,6 +115,42 @@
             <h3>Varios</h3>
         </div>
         <div class="col-12 col-sm-6 col-md-4 col-xl-2" *ngFor="let item of varios">
+            <div class="card-holder">
+                <div class="icon-holder d-flex align-items-center">
+                    <div class="button-container" (click)="play(item.src)">
+                        <div class="d-flex align-items-center justify-content-center play-button">PLAY</div>
+                    </div>
+                </div>
+                <div class="text-holder d-flex align-items-center justify-content-center">
+                    <p class="text-center">{{item.displayName}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="row section-container">
+        <div class="col-12">
+            <h3>Merca</h3>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-2" *ngFor="let item of merca">
+            <div class="card-holder">
+                <div class="icon-holder d-flex align-items-center">
+                    <div class="button-container" (click)="play(item.src)">
+                        <div class="d-flex align-items-center justify-content-center play-button">PLAY</div>
+                    </div>
+                </div>
+                <div class="text-holder d-flex align-items-center justify-content-center">
+                    <p class="text-center">{{item.displayName}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="row section-container">
+        <div class="col-12">
+            <h3>Cantinfla</h3>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-xl-2" *ngFor="let item of cantinfla">
             <div class="card-holder">
                 <div class="icon-holder d-flex align-items-center">
                     <div class="button-container" (click)="play(item.src)">

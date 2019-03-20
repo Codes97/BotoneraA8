@@ -109,16 +109,6 @@ export class ListaAudiosService {
 	{src: 'china_nohayporque', displayName:'no hay porque'},
 	{src: 'china_puto', displayName:'puto'},
 	{src: 'china_taradoeh', displayName:'tarado eh?!'},
-	{src: 'cantinfla_aaaaaah', displayName:'AAAAARGGH'},
-	{src: 'cantinfla_aguitamijo', displayName:'AGÜITA'},	
-	{src: 'cantinfla_traigame_una_aguita_papa', displayName:'AGÜITA PAPA'},	
-	{src: 'cantinfla_lloro_por_amor', displayName:'AMOR VITE'},	
-	{src: 'cantinfla_queja', displayName:'CANTINFLA QUEJA'},	
-	{src: 'cantinfla_sino_no_te_vamoa_paga', displayName:'NO TE VAMO A PAGA'},	
-	{src: 'cantinfla_pasa_pasa_pasa', displayName:'PASA PASA'},	
-	{src: 'cantinfla_como_estamos_hoy', displayName:'COMO ESTAMOS HOY'},	
-	{src: 'cantinfla_agua_caliente', displayName:'AGUA CALIENTE'},	
-	{src: 'cantinfla_dioelamordio', displayName:'POR DIO'},
 	{src: 'mf_anoteanote', displayName:'ANOTE'},
 	{src: 'mf_arrrrww', displayName:'ARRRRWW'},
 	{src: 'mf_mandalemecha', displayName:'MECHA'},
@@ -144,6 +134,54 @@ export class ListaAudiosService {
 	{src: 'no_no_no_no_fua', displayName:'NONONONO'},
 	{src: 'fuaaaaaaaaa', displayName:'FUAAAAAA'},
 	{src: 'situaciones_inusuales_fua', displayName:'SITUACIONES INUSUALES'},
+	{src: 'inundaciones_iuuuju', displayName:'IUUUJU'},
+	{src: 'inundaciones_ahora_estamos_hasta_las_bolas', displayName:'ESTAMO HASTA LAS BOLAS'},
+	{src: 'inundaciones_me_estoy_cagando_todo', displayName:'ME ESTOY CAGANDO TODO'},
+	{src: 'inundaciones_noo', displayName:'NOO INUNDACIONES'},
+	{src: 'guiso_fideo_moñito', displayName:'Guiso fideo moñito'},
+	{src: 'hijo_como_trompada', displayName:'Va como trompada'},
+	{src: 'AHHH_moñito', displayName:'AHHHH moñito'},
+	{src: 'y_si_hijo', displayName:'Y SIII HIJO'},
+	{src: 'con_guiso_fideo_moñito', displayName:'Con un guiso de fideo moñito'},
+	{src: 'chinwenwencha', displayName:'TE LA TOMASTE TODA CHINWENWENCHA'},
+	{src: 'chinwenwencha - grito', displayName:'CHINWENWENCHA GRITO'},
+	{src: '2tiros_me_da_agua', displayName:'ME DA AGUA'},
+	{src: '2tiros_buscar_agua', displayName:'BUSCAR AGUA'},
+	{src: '2tiros_le_tire_2_tiros', displayName:'LE TIRE 2 TIROS'},
+	{src: '3pingos_alcoholizado', displayName:'ESTOY ALCOHOLIZADO'},
+	{src: '3pingos_eunsabado', displayName:'E\' UN SABADO'},
+	{src: '3pingos_ganas_de_tomar', displayName:'GANAS DE TOMAR'},
+	{src: '3pingos_problema_hay', displayName:'QUE PROBLEMA HAY'},
+	{src: '3pingos_ganas_de_tomar_y_3pingos', displayName:'Y ME CHUPA 3 PINGOS'},
+	{src: '3pingos_me_chupa', displayName:'ME CHUPA 3 PINGOS'},
+	{src: '3pingos_escuchando_cumbia', displayName:'ESCUCHANDO CUMBIA'},
+	{src: '3pingos_cigarro', displayName:'CIGARRO'},
+	{src: '3pingos_cago_a_trompadas', displayName:'CAGO A TROMPADAS'},
+	{src: '3pingos_me_quise_defender', displayName:'ME QUISE DEFENDER'},
+	{src: '3pingos_periodistas_policias', displayName:'A TODOS LOS PERIODISTAS'},
+	{src: '3pingos_no_sean_tan_pelotudos', displayName:'NO SEAN TAN PELOTUDOS'},
+	{src: 'aerolineas_alegria_barbara', displayName:'ALEGRIA BARBARA'},
+	{src: 'aerolineas_bolas_bien_puestas', displayName:'BOLAS BIEN PUESTAS'},
+	{src: 'aerolineas_vo_y_la_conchaetumare', displayName:'VO Y LA CONCHAETUMADRE'},
+	{src: 'aerolineas_hijo_de_milputas', displayName:'HIJO DE MIL PUTAS'},
+	{src: 'newgay_estaba_tomando_nama', displayName:'ESTABA TOMANDO NAMA'},
+	{src: 'newgay_fin_de_semana_noma', displayName:'FIN DE SEMANA NOMA'},
+	{src: 'newgay_la_pelota', displayName:'JUGAR A LA PELOTA'},
+	{src: 'newgay_new_gay_estaba_tomando', displayName:'NEW GAY ESTABA TOMANDO'},
+	{src: 'newgay_sabes_lo_que_es_newgay', displayName:'SABES LO QUE ES NEWGAY'},
+	{src: 'newgay_ir_a_trabajar', displayName:'IR A TRABAJAR'},
+	{src: 'coquito_vena_cacal', displayName:'VENA CACAL'},
+	{src: 'coquito_tres_y_tres_seis', displayName:'TRE Y TRE'},
+	{src: 'coquito_plano_sexual', displayName:'PLANO SEXUAL'},
+	{src: 'coquito_parte_ortopedica', displayName:'PARTE ORTOPEDICA'},
+	{src: 'coquito_gusta_vena_cacal', displayName:'GUSTA VENA CACAL'},
+	{src: 'coquito_es_el_hombre_degenerado', displayName:'HOMBRE DEGENERADO'},
+	{src: 'coquito_depende_de_cada_uno', displayName:'DEPENDE DE CADA UNO'},
+	{src: 'coquito_cuatro_conchas', displayName:'CUATRO CONCHAS'},
+	{src: 'coquito_como_decia_aristoteles', displayName:'COMO DECIA ARISTOTELES'},
+	{src: 'coquito_a_ese_no_sabia', displayName:'A ESE NO SABIA'},
+  ];
+	merca = [
 	{src: 'aguante_la_merca', displayName:'AGUANTE LA MERK'},
 	{src: 'no_sabes_pariente_merk', displayName:'NO SABE PARIENTE'},
 	{src: 'cinco_bolsa_de_cinco_merca', displayName:'5 bolsas de 5'},
@@ -157,7 +195,32 @@ export class ListaAudiosService {
 	{src: 'todo_el_asado_merca', displayName:'TODO EL ASADO QUEDO'},
 	{src: 'mirando_la_cara_merca', displayName:'MIRANDO LA CARA'},
 	{src: 'ñiambre_tenia_merca', displayName:'ÑAMBRE TENIA'},
-  ];
+	{src: 'alma_caricatica_merca', displayName:'ALGUN ALMA CARICATICA'},
+	{src: 'como_una_roca_merca', displayName:'QUEDAR COMO UNA ROCA'},
+	{src: 'cuatro_tirito_merca', displayName:'CUATRO TIRITO'},
+	{src: 'letrico_merca', displayName:'LECTRICO MERCA'},
+	{src: 'pa_mono_merca', displayName:'PA MONO'},
+	{src: 'pa_ñeri_merca', displayName:'PA ÑERI'},
+	{src: 're_duro_mal_merca', displayName:'RE DURO MAL'},
+	{src: 'si_tiene_bolsa_merca', displayName:'SI TIENE UNA BOLSA'},
+	{src: 'tremendo_sueño_merca', displayName:'TREMENDO SUEÑO SAIA'},
+	{src: 'uff_pa_ñeri_merca', displayName:'UFF.. PA ÑERI'},
+	{src: 'una_teca_merca', displayName:'ME MANDO UNA TECA'},
+	{src: 'verduras_merca', displayName:'UNA VERDURA...'},
+	{src: 'ya_sabe_ñeri', displayName:'YA SABE ÑERI'}
+	];
+	cantinfla = [
+	{src: 'cantinfla_aaaaaah', displayName:'AAAAARGGH'},
+	{src: 'cantinfla_aguitamijo', displayName:'AGÜITA'},	
+	{src: 'cantinfla_traigame_una_aguita_papa', displayName:'AGÜITA PAPA'},	
+	{src: 'cantinfla_lloro_por_amor', displayName:'AMOR VITE'},	
+	{src: 'cantinfla_queja', displayName:'CANTINFLA QUEJA'},	
+	{src: 'cantinfla_sino_no_te_vamoa_paga', displayName:'NO TE VAMO A PAGA'},	
+	{src: 'cantinfla_pasa_pasa_pasa', displayName:'PASA PASA'},	
+	{src: 'cantinfla_como_estamos_hoy', displayName:'COMO ESTAMOS HOY'},	
+	{src: 'cantinfla_agua_caliente', displayName:'AGUA CALIENTE'},	
+	{src: 'cantinfla_dioelamordio', displayName:'POR DIO'}
+	];
 
 /*
 / Agregar hot-key
@@ -234,6 +297,12 @@ public hotKeys = {
   '96': 'lo_besito1',
 };
 
+  public getListaMerca(){
+	return this.merca;
+  }
+  public getListaCantinfla(){
+	return this.cantinfla;
+  }
   public getObjetoHotKeys(){
     return this.hotKeys;
   }

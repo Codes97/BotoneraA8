@@ -21,6 +21,8 @@ export class HomeComponent{
   public clasicos = [];
   public futbol = [];
   public varios = [];
+  public merca = [];
+  public cantinfla =[];
   public todos = [];
   
   public speed = 1.0;
@@ -39,7 +41,9 @@ export class HomeComponent{
     this.clasicos = this.sonidosService.getListaClasicos();
     this.futbol = this.sonidosService.getListaFutbol();
     this.varios = this.sonidosService.getListaVarios();
-	this.todos = this.todos.concat(this.listaLocoEndu, this.travas, this.ronnieColeman, this.clasicos, this.futbol, this.varios);
+	this.merca = this.sonidosService.getListaMerca();
+	this.cantinfla = this.sonidosService.getListaCantinfla();
+	this.todos = this.todos.concat(this.listaLocoEndu, this.travas, this.ronnieColeman, this.clasicos, this.futbol, this.varios, this.merca);
 	this.todos = this.todos.map(a => a.src);
 	
 	for (const combinedHotKey in this.combinedHotKeys) {
