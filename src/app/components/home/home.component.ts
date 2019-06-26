@@ -12,7 +12,8 @@ export class HomeComponent{
   version: string = 'v1.130';
   audio = new Audio();
 
-  public hotKeys = { };
+  public defHotKeys = { };
+  public newHotKeys = { };
   public combinedHotKeys = { };
 
   public listaLocoEndu = [];
@@ -24,12 +25,17 @@ export class HomeComponent{
   public merca = [];
   public cantinfla =[];
   public todos = [];
+  public selected = [];
+  public kMap = {};
+  public defaultMode = true;
   
   public speed = 1.0;
 
   constructor(private sonidosService: ListaAudiosService) {
-    this.hotKeys = this.sonidosService.getObjetoHotKeys();
+    this.defHotKeys = this.sonidosService.getHotKeysDefMap();
+    this.newHotKeys = this.sonidosService.getHotKeysNewMap();
     this.combinedHotKeys = this.sonidosService.getObjetoHotKeysCombinadas();
+	this.kMap = this.sonidosService.getKeyMap();
 	this.obtenerListasAudio();
   }
   
@@ -43,7 +49,7 @@ export class HomeComponent{
     this.varios = this.sonidosService.getListaVarios();
 	this.merca = this.sonidosService.getListaMerca();
 	this.cantinfla = this.sonidosService.getListaCantinfla();
-	this.todos = this.todos.concat(this.listaLocoEndu, this.travas, this.ronnieColeman, this.clasicos, this.futbol, this.varios, this.merca);
+	this.todos = this.todos.concat(this.listaLocoEndu, this.travas, this.ronnieColeman, this.clasicos, this.futbol, this.varios, this.merca, this.cantinfla);
 	this.todos = this.todos.map(a => a.src);
 	
 	for (const combinedHotKey in this.combinedHotKeys) {
@@ -96,24 +102,31 @@ export class HomeComponent{
 	if ($event.keyCode == 220) {
       this.random();
     }
-	if($event.keyCode == 107){
+	if($event.keyCode == this.kMap['NUM0']){
+		this.defaultMode = !this.defaultMode;
+	}
+	
+	if($event.keyCode == this.kMap['PAD_MAS']){
 		this.speedUp();
 	}
-	if($event.keyCode == 109){
+	if($event.keyCode == this.kMap['PAD_MENOS']){
 		this.speedDown();
 	}
-	if($event.keyCode == 110){
+	if($event.keyCode == this.kMap['PAD_PUNTO']){
 		this.resetSpeed();
 	}
-    if ($event.keyCode == 16) {
+    if ($event.keyCode == this.kMap['SHIFT']) {
       this.stop();
-    } else {
-      if ($event.keyCode && $event.ctrlKey) {
-        this.play(`${this.combinedHotKeys[$event.keyCode]}`);
-        return true;
-      }
-      this.play(`${this.hotKeys[$event.keyCode]}`);
     }
+	  if ($event.keyCode && $event.ctrlKey) {
+		this.play(this.combinedHotKeys[$event.keyCode]);
+		return true;
+	  }
+	  //this.play(`${this.hotKeys[$event.keyCode]}`);
+	  
+	  this.play(this.defaultMode ? this.defHotKeys[$event.keyCode] : this.newHotKeys[$event.keyCode]);
+
+	
     return true;
   }
 }
