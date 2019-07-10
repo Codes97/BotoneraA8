@@ -12,8 +12,9 @@ export class HomeComponent{
   version: string = 'v1.130';
   audio = new Audio();
 
-  public defHotKeys = { };
-  public newHotKeys = { };
+  public KeyBoard0 = { };
+  public KeyBoard1 = { };
+  public KeyBoard2 = { };
   public combinedHotKeys = { };
 
   public listaLocoEndu = [];
@@ -25,15 +26,20 @@ export class HomeComponent{
   public merca = [];
   public cantinfla =[];
   public todos = [];
+  public vamosNewell = [];
+  public listaGestion = [];
   public selected = [];
   public kMap = {};
-  public defaultMode = true;
+  public defaultMode = 0;
+  
+  readonly MAX_KEYBOARDS = 2;
   
   public speed = 1.0;
 
   constructor(private sonidosService: ListaAudiosService) {
-    this.defHotKeys = this.sonidosService.getHotKeysDefMap();
-    this.newHotKeys = this.sonidosService.getHotKeysNewMap();
+    this.KeyBoard0 = this.sonidosService.getHotKeysKeyB0();
+    this.KeyBoard1 = this.sonidosService.getHotKeysKeyB1();
+    this.KeyBoard2 = this.sonidosService.getHotKeysKeyB2();
     this.combinedHotKeys = this.sonidosService.getObjetoHotKeysCombinadas();
 	this.kMap = this.sonidosService.getKeyMap();
 	this.obtenerListasAudio();
@@ -49,7 +55,9 @@ export class HomeComponent{
     this.varios = this.sonidosService.getListaVarios();
 	this.merca = this.sonidosService.getListaMerca();
 	this.cantinfla = this.sonidosService.getListaCantinfla();
-	this.todos = this.todos.concat(this.listaLocoEndu, this.travas, this.ronnieColeman, this.clasicos, this.futbol, this.varios, this.merca, this.cantinfla);
+	this.vamosNewell = this.sonidosService.getListaNewell();
+	this.listaGestion = this.sonidosService.getListaGestion();
+	this.todos = this.todos.concat(this.listaLocoEndu, this.travas, this.ronnieColeman, this.clasicos, this.futbol, this.varios, this.merca, this.cantinfla, this.vamosNewell, this.listaGestion);
 	this.todos = this.todos.map(a => a.src);
 	
 	for (const combinedHotKey in this.combinedHotKeys) {
@@ -101,9 +109,14 @@ export class HomeComponent{
   hotkeys($event) {
 	if ($event.keyCode == 220) {
       this.random();
+	  return;
     }
 	if($event.keyCode == this.kMap['NUM0']){
-		this.defaultMode = !this.defaultMode;
+		if(this.defaultMode < this.MAX_KEYBOARDS)
+			this.defaultMode++;
+		else{
+			this.defaultMode = 0;
+		}
 	}
 	
 	if($event.keyCode == this.kMap['PAD_MAS']){
@@ -122,10 +135,12 @@ export class HomeComponent{
 		this.play(this.combinedHotKeys[$event.keyCode]);
 		return true;
 	  }
-	  //this.play(`${this.hotKeys[$event.keyCode]}`);
 	  
-	  this.play(this.defaultMode ? this.defHotKeys[$event.keyCode] : this.newHotKeys[$event.keyCode]);
-
+	  switch(this.defaultMode){
+		  case 0: this.play(this.KeyBoard0[$event.keyCode]); break;
+		  case 1: this.play(this.KeyBoard1[$event.keyCode]); break;
+		  case 2: this.play(this.KeyBoard2[$event.keyCode]); break;
+	  }
 	
     return true;
   }

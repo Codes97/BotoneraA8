@@ -150,6 +150,20 @@
     }
 }
 
+.keyboard-label{
+    width: 30px;
+    height: 30px;
+    word-break: break-all;
+    font-family: 'Press Start 2P', cursive;
+    background: #E76E55;
+    box-shadow: inset -4px -4px 0px 0px #8C2022;
+    position: fixed;
+    left: 0;
+    top: 20%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 .speed-label{
     width: 50px;
     height: 30px;
