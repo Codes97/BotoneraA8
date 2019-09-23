@@ -196,6 +196,12 @@ export class ListaAudiosService {
 	{src: 'Sisabes', displayName:'Bucha si sabes', keyb_0:'', keyb_1:''},
 	{src: 'Dehaberlosabido', displayName:'Bucha de haberlo sabido antes', keyb_0:'', keyb_1:''},
 	{src: 'Conchesumare', displayName:'Bucha conchesumadre', keyb_0: '', keyb_1:''},
+	{src: 'no_se_inunda_mas', displayName:'NO SE INUNDA MAS'},
+	{src: 'matar_corrupto_cumpla_setenta', displayName:'CUANDO CUMPLA SETENTA'},
+	{src: 'matar_corrupto_videla', displayName:'SE LA DIERON A VIDELA'},
+	{src: 'matar_corrupto_prision_domiciliaria', displayName:'PRISION DOMICILIARIA'},
+	{src: 'matar_corrupto_pais_inviable', displayName:'PAIS INVIABLE'},
+	
   ];
 	merca = [
 	{src: 'aguante_la_merca', displayName:'AGUANTE LA MERK', keyb_0:'',keyb_1:'', keyb_2:'NUM1'},
