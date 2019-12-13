@@ -32,7 +32,13 @@ export class HomeComponent{
   public kMap = {};
   public defaultMode = 0;
   
+  public mauriBotActive = false;
+  public mauriBotInterval = null;
+  
   readonly MAX_KEYBOARDS = 2;
+  
+  readonly MAX_MAURIBOT_TIME = 60000;
+  readonly MIN_MAURIBOT_TIME = 15000;
   
   public speed = 1.0;
 
@@ -107,7 +113,7 @@ export class HomeComponent{
   }
 
   hotkeys($event) {
-	if ($event.keyCode == 220) {
+	if ($event.keyCode == 231) {
       this.random();
 	  return;
     }
@@ -122,26 +128,60 @@ export class HomeComponent{
 	if($event.keyCode == this.kMap['PAD_MAS']){
 		this.speedUp();
 	}
+	
 	if($event.keyCode == this.kMap['PAD_MENOS']){
 		this.speedDown();
 	}
+	
 	if($event.keyCode == this.kMap['PAD_PUNTO']){
 		this.resetSpeed();
 	}
+	
     if ($event.keyCode == this.kMap['SHIFT']) {
       this.stop();
     }
-	  if ($event.keyCode && $event.ctrlKey) {
+	
+    if ($event.keyCode == this.kMap['ALT']) {
+      this.mauriBot();
+    }
+	
+	if ($event.keyCode && $event.ctrlKey) {
 		this.play(this.combinedHotKeys[$event.keyCode]);
 		return true;
-	  }
+	}
 	  
-	  switch(this.defaultMode){
-		  case 0: this.play(this.KeyBoard0[$event.keyCode]); break;
-		  case 1: this.play(this.KeyBoard1[$event.keyCode]); break;
-		  case 2: this.play(this.KeyBoard2[$event.keyCode]); break;
-	  }
+	switch(this.defaultMode){
+	  case 0: this.play(this.KeyBoard0[$event.keyCode]); break;
+	  case 1: this.play(this.KeyBoard1[$event.keyCode]); break;
+	  case 2: this.play(this.KeyBoard2[$event.keyCode]); break;
+	}
 	
     return true;
+  }
+  
+  public randomNumber(min, max) : number{
+	  return Math.random() * (max - min) + min;
+  }
+  
+  public mauriBot(){
+	  if(this.mauriBotActive){
+		this.mauriBotActive = false;
+	  }else{
+		  let delay = Math.floor(this.randomNumber(this.MIN_MAURIBOT_TIME, this.MAX_MAURIBOT_TIME));
+		  this.mauriBotActive = true;
+		  this.mauriBotInterval = window.setInterval(this.mauriBotAction.bind(this), delay);
+	  }
+  }
+  
+  public mauriBotAction(){
+	  if(this.mauriBotActive){
+		  let delay = Math.floor(this.randomNumber(this.MIN_MAURIBOT_TIME, this.MAX_MAURIBOT_TIME));
+		  this.random();
+		  clearInterval(this.mauriBotInterval);
+		  this.mauriBotInterval = window.setInterval(this.mauriBotAction.bind(this), delay);
+	  }else{
+		  clearInterval(this.mauriBotInterval);
+	  }
+	  
   }
 }

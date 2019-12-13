@@ -30,12 +30,16 @@
     -
 </button>
 
+<button type="button" class="bot-button d-flex justify-content-center" (click)="mauriBot()">
+    {{mauriBotActive ? 'ON' : 'OFF'}}
+</button>
+
 <button type="button" class="stop-button d-flex justify-content-center" (click)="stop()">
     STOP
 </button>
 
 <label class="label speed-label">{{speed.toFixed(1)}}</label>
-<label class="label keyboard-label">{{this.defaultMode}}</label>
+<label class="label keyboard-label">{{defaultMode}}</label>
 
 <div class="container" (window:keydown)="hotkeys($event)">
 
